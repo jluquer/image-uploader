@@ -1,0 +1,35 @@
+<main>
+  <form class="card" #imageForm="ngForm" *ngIf="status == null">
+    <h1>Upload your image</h1>
+    <p id="file-should">File should be Jpeg, PNG...</p>
+    <div id="drag">
+      <input type="file" name="image" accept="image/*" [(ngModel)]="image" #imageInput
+        (change)="handleFiles($event.target.files)">
+      <img src="assets/images/image.svg" alt="default image">
+      <p>Drag & Drop your image here</p>
+    </div>
+    <p>or</p>
+    <label for="image" (click)="imageInput.click()" class="btn">Choose a file</label>
+  </form>
+
+  <div id="uploading" *ngIf="status == 'uploading'">
+    <h1>Uploading image...</h1>
+    <div id="loading-bar">
+      <div></div>
+    </div>
+  </div>
+
+  <div class="card" *ngIf="status == 'success'">
+    <div class="material-icons done-icon">done</div>
+    <h1>Uploaded Successfully!</h1>
+    <div id="image">
+      <img class="img" src={{imagePath}} alt="Uploaded image">
+    </div>
+    <div id="copy-link">
+      <p>{{imagePath}}</p>
+      <button class="btn" (click)="copyLink()">Copy link</button>
+    </div>
+  </div>
+
+  <p id="created">created by Luque - devChallenges.io</p>
+</main>
