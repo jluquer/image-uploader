@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Image Uploader</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -75,4 +75,4 @@ $ npm start
 
 ## Contact
 
-- GitHub [@javierluque96](https://github.com/javierluque96)
+- GitHub [@jluquer](https://github.com/jluquer)
